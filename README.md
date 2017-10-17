@@ -19,9 +19,24 @@ https://releases.hashicorp.com/vagrant/2.0.0/vagrant_2.0.0_x86_64.dmg?_ga=2.2247
 ## After Installing :
 
 
+Using the the command line create and set directory of file :
+
+
+* create a new folder  :
+
+* in the terminal type :
+
+mkdir folder_name
+
+
+cd folder_name 
+
+
 
 #------------------------------------------------------------
 ## Bonus :
+
+
 
 * git clone :
 
