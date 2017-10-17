@@ -53,6 +53,8 @@ vagrant up
 
 vagrant ssh
 
+* Then jump to step 8
+
 #-----------------------------------------------------------------------------------
 
 
@@ -60,14 +62,14 @@ vagrant ssh
 
 
 
-* Create a new file, open your terminal and on your command line run -- This should take a while:
+1. Create a new file, open your terminal and on your command line run -- This should take a while:
 
 
 vagrant init unbuntu/xenial64 
 
 
 
-* Then run with a text-edit open Vagrant file, replace everything in it with :
+2. Then run with a text-edit open Vagrant file, replace everything in it with :
 
 ----------------------------------------------------
 
@@ -93,16 +95,16 @@ end
 
 
 
-* Save and close the file and then run in the terminal --> to start the machine :
+3.  Save and close the file and then run in the terminal --> to start the machine :
 
 vagrant up
 
-* Then to login to the machine :
+4.  Then to login to the machine :
 
 vagrant ssh 
 
 
-* At this point you should be logged in the command line of the virtual machine where you should enter :
+5.  At this point you should be logged in the command line of the virtual machine where you should enter :
 
 
 sudo get-apt update -y
@@ -112,17 +114,21 @@ sudo get-apt install nginx -y
 
 
 
-* Enterin the command line :
+6.  Enterin the command line :
  exit 
 
-* Then Enter :
+7.  Then Enter :
 
 vagrant reload
 
 
 
 
-* Now open up http//:development.local to check if everything is allrright. If not run it again. 
+8. Now open up:
+http//:development.local
+
+
+ to check if everything is alrright. If not run try the code again. 
 
 
 
