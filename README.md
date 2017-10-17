@@ -1,35 +1,35 @@
-# How to run vagrant .
+# How to run your Virtual Machine
 
 ## Downloads 
 
-### 1. Download and Install Virtual Box :
+### Download and install Virtual Box and Vagrant :
 
-... https://www.virtualbox.org/wiki/Downloads
+* [Virtual Box](https://www.virtualbox.org/wiki/Downloads)
 
+* [Vagrant](https://www.vagrantup.com/downloads.html)
 
+## Execute the following :
 
-* Clone the directory using git:
+1. Clone the directory using git:
 
-...git clone git@github.com:ghariosk/DevOps.git
+ `git clone git@github.com:ghariosk/DevOps.git`
 
+2.  Enter the directory :
 
-* Enter the directory :
+ `cd DevOps`
 
-...cd DevOps
-
-
-* Run in the terminal :
-
-...vagrant up
+3. Run  `vagrant up` in the terminal.
 
 
-* Then run :
+4.  Then run  `vagrant ssh`.
 
-...vagrant ssh
+5.  Then enter this in your browser: 
 
-* Then enter this in your browser.. If not run try the code again. :
+   		http//:development.local
 
-...http//:development.local
+You should be directed to the nginx home page:
+
+![Screenshot of the page](Screenshot.png)
 
 
 
