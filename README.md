@@ -4,16 +4,14 @@
 
 ### 1. Download Virtual Box :
 
-http://download.virtualbox.org/virtualbox/5.1.30/VirtualBox-5.1.30-118389-OSX.dmg
+https://www.virtualbox.org/wiki/Downloads
 
 
 
 
 ### 2.  Download Vagrant
 
-https://releases.hashicorp.com/vagrant/2.0.0/vagrant_2.0.0_x86_64.dmg?_ga=2.22479548.604049435.1508244272-926930284.1508244272
-
-
+https://www.vagrantup.com/downloads.html
 
 
 ## After Installing :
