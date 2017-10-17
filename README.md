@@ -18,6 +18,33 @@ https://releases.hashicorp.com/vagrant/2.0.0/vagrant_2.0.0_x86_64.dmg?_ga=2.2247
 
 ## After Installing :
 
+
+
+#------------------------------------------------------------
+## Bonus :
+
+* git clone :
+
+git@github.com:ghariosk/DevOps.git
+
+
+* run in the terminal :
+
+vagrant up
+
+
+* then run :
+
+
+vagrant ssh
+
+#-----------------------------------------------------------------------------------
+
+
+
+
+
+
 * Create a new file, open your terminal and on your command line run -- This should take a while:
 
 
@@ -51,12 +78,39 @@ end
 
 
 
-* Save and close the file and then run in the terminal :
+* Save and close the file and then run in the terminal --> to start the machine :
 
 vagrant up
 
+* Then to login to the machine :
 
-* At th
+vagrant ssh 
+
+
+* At this point you should be logged in the command line of the virtual machine where you should enter :
+
+
+sudo get-apt update -y
+
+
+sudo get-apt install nginx -y
+
+
+
+* Enterin the command line :
+ exit 
+
+* Then Enter :
+
+vagrant reload
+
+
+
+
+* Now open up http//:development.local to check if everything is allrright. If not run it again. 
+
+
+
 
 
 
