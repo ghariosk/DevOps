@@ -38,17 +38,22 @@ cd folder_name
 
 
 
-* git clone :
+* Clone the directory using git:
 
-git@github.com:ghariosk/DevOps.git
+git clone git@github.com:ghariosk/DevOps.git
 
 
-* run in the terminal :
+* Enter the directory :
+
+cd DevOps
+
+
+* Run in the terminal :
 
 vagrant up
 
 
-* then run :
+* Then run :
 
 
 vagrant ssh
@@ -115,6 +120,7 @@ sudo get-apt install nginx -y
 
 
 6.  Enterin the command line :
+
  exit 
 
 7.  Then Enter :
@@ -128,7 +134,7 @@ vagrant reload
 http//:development.local
 
 
- to check if everything is alrright. If not run try the code again. 
+ to check if everything is alright. If not run try the code again. 
 
 
 
