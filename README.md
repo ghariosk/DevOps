@@ -58,8 +58,8 @@ vagrant init unbuntu/xenial64
 
 
 
-# -*- mode: ruby -*-
-# vi: set ft=ruby :
+#-*- mode: ruby -*-
+#vi: set ft=ruby :
 
 
 Vagrant.configure("2") do |config|
