@@ -8,7 +8,7 @@
 
 * [Vagrant](https://www.vagrantup.com/downloads.html)
 
-## Execute the following :
+## Execute the following in the terminal:
 
 1. Clone the directory using git:
 
@@ -18,16 +18,19 @@
 
  `cd DevOps`
 
-3. Run  `vagrant up` in the terminal.
+3. Run 
+
+ `vagrant up`
+
+4. Run 
+
+ `vagrant ssh`
 
 
-4.  Then run  `vagrant ssh`.
+Then enter this in your browser: `http//:development.local`
 
-5.  Then enter this in your browser: 
+> You should be directed to the **nginx** home page:
 
-   		http//:development.local
-
-You should be directed to the nginx home page:
 
 ![Screenshot of the page](Screenshot.png)
 
