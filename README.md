@@ -58,7 +58,7 @@ vagrant up
 
 vagrant ssh
 
-* Then jump to step 8
+* Then jump to step 10
 
 #-----------------------------------------------------------------------------------
 
@@ -123,14 +123,19 @@ sudo get-apt install nginx -y
 
  exit 
 
-7.  Then Enter :
+
+7. Enter in the command-line
+
+vagrant plugin install vagrant-hostsupdater
+
+8.  Then Enter :
 
 vagrant reload
 
+ 
 
+10. Now open up:
 
-
-8. Now open up:
 http//:development.local
 
 
