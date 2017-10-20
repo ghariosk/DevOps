@@ -19,14 +19,19 @@ sudo npm install pm2 -g
 
 # add app user and group
 
-sudo adduser --disabled-password app
+sudo adduser --disabled-password --gecos "" app # quotes would be to insert data.
 
 
 # sudo chown -R app:app app should change everythign owned to app user but the way the machine is syncing it will make ubutun owner again
 
-sudo chown -R app:app app 
+sudo chown -R app:app /home/ubuntu/app
 
 # user group folder
+
+
+# change persmission to read 
+
+chmod -R 700 app
 
 
 
