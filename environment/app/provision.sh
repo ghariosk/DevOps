@@ -33,7 +33,7 @@ sudo npm install pm2 -g
 
 #chmod -R 700 app
 
-sudo cp ~/app/proxy.conf /etc/nginx/sites-available/
+sudo cp ~/DevOps/app/proxy.conf /etc/nginx/sites-available/
 
 sudo unlink /etc/nginx/sites-enabled/default
 
