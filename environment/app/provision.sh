@@ -19,19 +19,35 @@ sudo npm install pm2 -g
 
 # add app user and group
 
-sudo adduser --disabled-password --gecos "" app # quotes would be to insert data.
+# sudo adduser --disabled-password --gecos "" app # quotes would be to insert data.
 
 
 # sudo chown -R app:app app should change everythign owned to app user but the way the machine is syncing it will make ubutun owner again
 
-sudo chown -R app:app /home/ubuntu/app
+#sudo chown -R app:app /home/ubuntu/app
 
 # user group folder
 
 
 # change persmission to read 
 
-chmod -R 700 app
+#chmod -R 700 app
+
+sudo cp ~/app/proxy.conf /etc/nginx/sites-available/
+
+sudo unlink /etc/nginx/sites-enabled/default
+
+
+
+sudo ln -s /etc/nginx/sites-available/proxy.conf /etc/nginx/sites-enabled/
+
+
+
+
+
+sudo service nginx restart
+
+
 
 
 
