@@ -12,16 +12,22 @@ curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 sudo apt-get install nodejs -y
 
 # install pm2
-npm install pm2 -g
+sudo npm install pm2 -g
 
 
 
 
-# 
+# add app user and group
 
-cd app
+sudo adduser --disabled-password app
 
 
-node app.js
+# sudo chown -R app:app app should change everythign owned to app user but the way the machine is syncing it will make ubutun owner again
+
+sudo chown -R app:app app 
+
+# user group folder
+
+
 
 
