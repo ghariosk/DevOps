@@ -14,14 +14,24 @@ sudo apt-get install -y mongodb-org
 
 
 
-sudo cp /home/ubuntu/mongo_db/mongodb.service /etc/systemd/system/
+# sudo cp /home/ubuntu/mongo_db/mongodb.service /etc/systemd/system/
 
 
 
 
 
 
-sudo cp /home/ubuntu/mongo_db/mongod.conf /etc/ 
+# sudo cp /home/ubuntu/mongo_db/mongod.conf /etc/ 
 
+
+
+sudo cp ~/DevOps/mongo_db/mongodb.service /etc/systemd/system/
+
+
+
+
+
+
+sudo cp ~/DevOps/mongo_db/mongod.conf /etc/ 
 
 sudo systemctl start mongodb
