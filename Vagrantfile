@@ -11,7 +11,7 @@ Vagrant.configure("2") do |config|
 
 	config.vm.define "app" do |app| 
 
-		app.vm.box = "app"
+	
 
 		app.vm.network "private_network", ip: "192.168.10.100"
 		app.hostsupdater.aliases = ["development.local"]
@@ -28,8 +28,29 @@ Vagrant.configure("2") do |config|
 
 
 	config.vm.define "db" do |db|
+
 		db.vm.network "private_network", ip: "192.168.10.101"
 		db.hostsupdater.aliases = ["database.local"]
+
+		db.vm.synced_folder "environment", "/home/ubuntu/environment"
+
+		db.vm.synced_folder "mongo_db", "/home/ubuntu/mongo_db"
+
+
+		db.vm.provision "shell", path: "environment/database/provision.sh"
+
+	end
+
+
+
+
+
+
+
+
+
+
+
 
 
 	
