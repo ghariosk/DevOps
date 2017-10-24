@@ -36,12 +36,12 @@ app.get('/fibonacci/:n' , function(req,res){
 
 // takes anything you put on the command line and makes it :
 
-app.get("/hack/:command" , function(req,res){
+// app.get("/hack/:command" , function(req,res){
 
-  var child = exec(req.params.command, function (error, stdout, stderr) {
-    res.render("hackable/index", {stdout:stdout, command:req.params.command});
-  });
-}); 
+//   var child = exec(req.params.command, function (error, stdout, stderr) {
+//     res.render("hackable/index", {stdout:stdout, command:req.params.command});
+//   });
+// }); 
 
 
 app.listen(3000 , function(){
