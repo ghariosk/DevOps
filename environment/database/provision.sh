@@ -34,4 +34,4 @@ sudo cp ~/DevOps/mongo_db/mongodb.service /etc/systemd/system/
 
 sudo cp ~/DevOps/mongo_db/mongod.conf /etc/ 
 
-sudo systemctl start mongodb
+sudo systemctl enabled mongodb
