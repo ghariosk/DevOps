@@ -1,10 +1,5 @@
 # frozen_string_literal: true
-source 'https://supermarket.chef.io'
+source 'https://github.com/'
 
-metadata
-
-
-site :opscode
-
-cookbook 'node-server', github: 'https://github.com/ghariosk/node-server'
-cookbook 'mongodbserver', github: 'https://github.com/ghariosk/mongodbserver'
+cookbook 'node-server', git: 'https://github.com/ghariosk/node-server'
+cookbook 'mongodb-server', git: 'https://github.com/ghariosk/mongodbserver'

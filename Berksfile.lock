@@ -1,0 +1,11 @@
+DEPENDENCIES
+  mongodb-server
+    git: https://github.com/ghariosk/mongodbserver
+    revision: 6b328ee25326344f7a55b72d0bf44156fb19c0e3
+  node-server
+    git: https://github.com/ghariosk/node-server
+    revision: 0126f09060bfc4503cc4b6f7f409c275f47dcd84
+
+GRAPH
+  mongodb-server (0.1.2)
+  node-server (0.1.0)

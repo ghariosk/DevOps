@@ -1,12 +1,16 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
+required_plugins = %w( vagrant-hostsupdater vagrant-berkshelf )
+	required_plugins.each do |plugin|
+	exec "vagrant plugin install #{plugin};vagrant #{ARGV.join(" ")}" unless Vagrant.has_plugin? plugin || ARGV[0] == 'plugin'
+end
 
 Vagrant.configure("2") do |config|
-	required_plugins = %w( vagrant-hostsupdater )
-		required_plugins.each do |plugin|
-		exec "vagrant plugin install #{plugin};vagrant #{ARGV.join(" ")}" unless Vagrant.has_plugin? plugin || ARGV[0] == 'plugin'
-	end
+
+
 	config.vm.box = "ubuntu/xenial64"
+	config.berkshelf.berksfile_path = 'Berksfile'
+	config.berkshelf.enabled = true
 
 	config.vm.define "app" do |app| 
 		app.vm.network "private_network", ip: "192.168.10.100"
@@ -15,9 +19,11 @@ Vagrant.configure("2") do |config|
 		app.vm.synced_folder "app", "/home/ubuntu/app"
 		app.vm.synced_folder "environment", "/home/ubuntu/environment"
 		# executes the command in the provisionning script
-		app.vm.provision "shell", path: "environment/app/provision.sh"
-		app.vm.provision "shell", inline: "echo 'export DB_HOST=mongodb://192.169.10.101/blog' >> .bashrc"
-		app.vm.provision "shell", inline: "echo 'echo 'DB_HOST=mongodb://192.169.10.101/blog'' >> .bashrc"
+		# app.vm.provision "shell", path: "environment/app/provision.sh"
+		app.vm.provision "shell", inline: "echo 'export DB_HOST=mongodb://192.168.10.101/blog' >> .bashrc"
+		app.vm.provision :chef_solo do |chef|
+			chef.add_recipe "node-server"
+		end
 	end
 
 
@@ -26,26 +32,11 @@ Vagrant.configure("2") do |config|
 		db.hostsupdater.aliases = ["database.local"]
 		db.vm.synced_folder "environment", "/home/ubuntu/environment"
 		db.vm.synced_folder "mongo_db", "/home/ubuntu/mongo_db"
-		db.vm.provision "shell", path: "environment/database/provision.sh"
+		# db.vm.provision "shell", path: "environment/database/provision.sh"
+		db.vm.provision :chef_solo do |chef|
+			chef.run_list = [
+				'recipe[mongodb-server]'
+			]
+		end
 	end
-
-
-	#export DB_HOST = mongodb://192.168.10.101/posts
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
-
-
-
 end
