@@ -27,7 +27,7 @@
  `vagrant ssh`
 
 
-Then enter this in your browser: `http//:development.local:3000`
+Then enter this in your browser: `http//:development.local`
 
 > You should be directed to the **nginx** home page:
 
@@ -46,6 +46,8 @@ Then enter this in your browser: `http//:development.local:3000`
 2.  Run :
 
 `node app.js` 
+
+
 
 
 
